@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="home">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GB Labs</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <nav>
-      <h1 class="logo">GB Labs</h1>
+      <!-- Logo links back to the top of the page -->
+      <h1 class="logo"><a href="#hero">GB Labs</a></h1>
+      
+      <!-- "Checkbox Hack" for mobile menu toggle -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#approach">Our Approach</a></li>
@@ -19,10 +25,11 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <!-- Hero section with background image -->
+  <section class="hero" id="hero">
     <div class="hero-text">
-      <h2>Ideas That Matter</h2>
-      <p>We turn promising concepts into real-world solutions.</p>
+      <h2>Build the future with us</h2>
+      <p>We turn promising ideas into real-world solutions.</p>
       <a href="#about" class="btn">Learn More</a>
     </div>
   </section>
@@ -30,11 +37,11 @@
   <section id="about" class="about">
     <h2>About GB Labs</h2>
     <p>
-      At GB Labs, we work with forward-thinking partners to transform big ideas 
-      into valuable technologies. Our team is built around a single belief: 
-      every good concept deserves a chance to thrive in the world. By 
-      integrating expertise across fields like machine learning, neuroscience, 
-      chemistry, and engineering, we move new ideas from speculation to 
+      At GB Labs, we work with forward-thinking partners to transform novel ideas
+      into valuable technologies. Our team is built around a single belief:
+      every good concept deserves a chance to thrive in the world. By
+      integrating expertise across fields like machine learning, neuroscience,
+      chemistry, and engineering, we move new ideas from speculation to
       demonstration.
     </p>
   </section>
@@ -42,30 +49,30 @@
   <section id="approach" class="approach">
     <h2>Our Approach</h2>
     <p>
-      We tackle the <em>explore-exploit tradeoff</em> head-on. We know that 
-      mid-to-large companies often focus on products rather than pure ideas, 
-      which can limit true innovation. Our goal is to explore interesting 
-      directions, validate them with real feedback, and then turn the promising 
-      results over to larger teams. This way, profit constraints don't stifle 
+      We tackle the <em>explore-exploit tradeoff</em> head-on. We know that
+      mid-to-large companies often focus on products rather than pure ideas,
+      which can limit true innovation. Our goal is to explore interesting
+      directions, validate them with real feedback, and then turn the promising
+      results over to larger teams. This way, profit constraints don't stifle
       exploration and academic constraints don't slow practical impact.
     </p>
   </section>
 
   <section id="team" class="team">
-    <h2>Meet the Founder</h2>
+    <h2>Team</h2>
     <div class="founder-bio">
       <img src="./img/gianluca.jpg" alt="Gianluca Bencomo" class="founder-photo" />
       <div class="bio-text">
         <h3>Gianluca Bencomo</h3>
         <p>
-          Gianluca is a PhD student at Princeton, where he bridges machine 
-          learning, neuroscience, and psychology. With a background in 
-          Biochemistry and hands-on experience in robotics, autonomous drones, 
-          and electrochemistry, he brings a unique problem-solving mindset to 
-          every project. He created GB Labs after seeing firsthand how academic 
-          research is underconstrained by profit, while industry often focuses 
-          too heavily on profit. GB Labs is his effort to find a creative sweet 
-          spot: generate bold ideas and test their real-world utility before 
+          Gianluca is a PhD student at Princeton, where he bridges machine
+          learning, neuroscience, and psychology. With a background in
+          Biochemistry and hands-on experience in robotics, autonomous drones,
+          and electrochemistry, he brings a unique problem-solving mindset to
+          every project. He created GB Labs after seeing firsthand how academic
+          research is underconstrained by profit, while industry often focuses
+          too heavily on profit. GB Labs is his effort to find a creative sweet
+          spot: generate bold ideas and test their real-world utility before
           scaling them up.
         </p>
       </div>
@@ -75,7 +82,7 @@
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>
-      Have a project or idea you’d like to explore? Let’s talk about how we 
+      Have a project or idea you’d like to explore? Let’s talk about how we
       can work together.
     </p>
     <a href="mailto:gb5435@princeton.edu" class="btn">Send an Email</a>

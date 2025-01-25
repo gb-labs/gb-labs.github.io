@@ -13,6 +13,7 @@ body {
   background-color: #f5f5f5;
 }
 
+/* Header */
 header {
   background-color: #fff;
   padding: 1rem 2rem;
@@ -25,12 +26,27 @@ nav {
   justify-content: space-between;
 }
 
-.logo {
+/* Logo */
+.logo a {
+  text-decoration: none;
+  color: #111;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #111;
 }
 
+/* The hidden checkbox toggles the menu on small screens */
+#menu-toggle {
+  display: none; /* Hide the checkbox itself */
+}
+
+/* Hamburger menu icon (visible at small screens) */
+.menu-icon {
+  display: none; /* Hidden by default, shown in media query */
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -49,8 +65,9 @@ nav {
   border-radius: 4px;
 }
 
+/* Hero Section */
 .hero {
-  background: url("https://via.placeholder.com/1600x700") no-repeat center center/cover;
+  background: url("./img/background.jpg") no-repeat center center/cover;
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -73,6 +90,7 @@ nav {
   margin-bottom: 1.5rem;
 }
 
+/* Button */
 .btn {
   display: inline-block;
   background-color: #333;
@@ -87,12 +105,13 @@ nav {
   background-color: #555;
 }
 
+/* Section Styles */
 .about,
 .approach,
 .team,
 .contact {
-  padding: 2rem;
   background-color: #fff;
+  padding: 2rem;
   margin: 1rem 2rem;
   border-radius: 4px;
 }
@@ -160,5 +179,65 @@ footer {
   border-radius: 4px;
   font-size: 0.9rem;
   color: #777;
+}
+
+/* -- Responsive Design: Under 768px Width -- */
+@media (max-width: 768px) {
+
+  /* Show the hamburger icon, hide the nav links by default */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide the nav links when not toggled */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* When checkbox is checked, show the nav links */
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  /* Space out the list items */
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  /* Hero adjustments for small screens */
+  .hero {
+    padding-left: 1rem;
+    min-height: 50vh;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  /* Section spacing */
+  .about,
+  .approach,
+  .team,
+  .contact {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  /* Founder bio stacking */
+  .founder-bio {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-photo {
+    margin-bottom: 1rem;
+  }
 }
 
